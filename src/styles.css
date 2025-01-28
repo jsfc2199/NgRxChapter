@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+.purple-background {
+  background-color: #3c0a9b;
+  color: rgb(235, 221, 27);
+}
+
+.purple-background .list-group-item {
+  background-color: #6f42c1;
+  color: rgb(235, 221, 27);
+  border: rgb(235, 221, 27);
+}
+
+.purple-background .list-group-item:hover {
+  background-color: #5a2d91;
+}
+
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.spinner-grow {
+  width: 5rem;
+  height: 5rem;
+}

@@ -1,0 +1,12 @@
+<div *ngIf="employee; else searchEmployee">
+  <h4 class="text-center">Employee Details</h4>
+
+  <p><strong>ID <i class="fa-solid fa-id-card"></i>: </strong> {{ employee.id }}</p>
+  <p><strong>Name <i class="fa-solid fa-signature"></i>: </strong>{{ employee.employee_name }}</p>
+  <p><strong>Salary <i class="fa-solid fa-money-bill"></i>: </strong>{{ employee.employee_salary }}</p>
+  <p><strong>Age <i class="fa-solid fa-bandage"></i>: </strong> {{ employee.employee_age }}</p>
+</div>
+
+<ng-template #searchEmployee>
+  <h4 class="text-center"><i class="fa-solid fa-hourglass-start"></i> Expecting Id to Show Information... <i class="fa-solid fa-hourglass-end"></i></h4>
+</ng-template>

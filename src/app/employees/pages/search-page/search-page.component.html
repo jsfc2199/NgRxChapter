@@ -1,0 +1,35 @@
+<div class="container mt-3">
+  <div class="row">
+    <!-- form space -->
+    <div class="col-md-6">
+      <form [formGroup]="searchForm">
+        <div class="col-12">
+          <h4 class="mb-3 d-flex justify-content-center">Search Employee by ID</h4>
+
+          <div class="mb-4">
+            <input type="number" class="form-control" placeholder="Write a numeric ID" formControlName="idSearch" />
+          </div>
+
+          <hr class="mb-4" />
+
+          <div class="d-grid gap-2">
+            <button
+              [disabled]="searchForm.invalid"
+              class="btn btn-primary btn-lg"
+              type="submit"
+              (click)="onSubmit()"
+            >
+              Search Employee
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- employee space -->
+    <div class="col-md-6">
+      <app-individual-employee [employee]="employee"></app-individual-employee>
+    </div>
+  </div>
+</div>
+

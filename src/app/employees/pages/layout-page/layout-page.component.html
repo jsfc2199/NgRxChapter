@@ -1,0 +1,50 @@
+<div class="d-flex">
+  <div
+    class="offcanvas offcanvas-start show purple-background fixed-top"
+    tabindex="-1"
+    id="offcanvas"
+    aria-labelledby="offcanvasLabel"
+    style="width: 250px"
+  >
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasLabel">Menu</h5>
+    </div>
+    <div class="offcanvas-body">
+      <div class="logo-container mb-3 text-center">
+        <a href="https://www.adldigitallab.com" target="_blank">
+          <img
+            src="https://www.adldigitallab.com/assets/images/logo.png"
+            alt="ADL Logo"
+            class="img-fluid"
+          />
+        </a>
+      </div>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let item of sidebarItems"
+          [routerLink]="item.url"
+        >
+          <i
+            class="fa-solid"
+            [ngClass]="{
+              'fa-magnifying-glass': item.label === 'Search Employee',
+              'fa-table': item.label === 'Check All Employees'
+            }"
+          ></i>
+          {{ item.label }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div
+    class="flex-grow-1 overflow-auto"
+    style="margin-left: 250px; padding-top: 1rem"
+  >
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
